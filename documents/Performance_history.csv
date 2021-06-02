@@ -1,0 +1,20 @@
+"Description","Label","accuracy","date","Model","Params "
+"First tokenization with simple cleaning with the logistic regression CV","Simple cleaning + LR CV","0.8007","11/13/2020","Logistic regression cv","solver='lbfgs', cv=5, max_iter=5000, random_state=72"
+"Changing logistic method","Cleaning + LR","0.8099","11/13/2020","Logistic regression","solver=""lbfgs"", random_state=72, n_jobs=-1, max_iter=5000"
+"Calculated base rate, further cleaning and merging of keywords with text","Cleaning + LR + MergeKeywords","0.8204","11/24/2020","Logistic regression","solver=""lbfgs"", random_state=72, n_jobs=-1, max_iter=5000"
+"Calculated optimal Logistic regression parameters (calculed by GridSearchCV) without the merged keywords","Cleaning + GridSearchCV(LR)","0.8222","11/25/2020","Logistic regression","C=1.2067926406393288, max_iter=5000, n_jobs=2,random_state=72"
+"Calculated optimal Logistic regression parameters (calculed by GridSearchCV)  with the merged keywords","","0.823","11/26/2020","Logistic regression","C=1.2067926406393288, max_iter=5000, n_jobs=2,random_state=72"
+"Calculated optimal TFIDF parameters -> Overfitting","GridSearchCV(TFIDF)","0.8143","11/26/2020","Logistic regression","analyzer='word', binary=False, decode_error='strict', encoding='latin-1', input='content', lowercase=True, max_df=0.25, max_features=None,min_df=1, ngram_range=(1, 2), norm='l2', preprocessor=None,smooth_idf=True, stop_words=None, strip_accents=None,sublinear_tf=True, token_pattern='(?u)\\b\\w\\w+\\b',tokenizer=spacy_tokenizer,use_idf=True, vocabulary=None"
+"Merged optimal Log regression and tfidf parameters","GridSearchCV(TFIDF) +GridSearchCV(LR)","0.8169","11/26/2020","Logistic regression","C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=100,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=None, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False"
+"Pca method : Pipe (KNN)","PCA + KNN","0.72","11/30/2020","KNN","K =15"
+"Pca method : Pipe (Pca + LR)","PCA  + LR","0.73","11/30/2020","Logistic regression","max_iter=5000, n_jobs=2,random_state=72                   "
+"Pca method : Pipe (Scaler + LR)","Scaler + LR","0.73","11/30/2020","Logistic regression","max_iter=5000, n_jobs=2,random_state=72                   "
+"Pca method : Pipe (Pca + Scaler + LR)","Pca + Scaler + LR","0.73","11/30/2020","Logistic regression","max_iter=5000, n_jobs=2,random_state=72                   "
+"Pca method : Pipe (Pca + LR(parameter C))","Pca + LR(parameter C)","0.73","11/30/2020","Logistic regression","C=1.2067926406393288, max_iter=5000, n_jobs=2,random_state=72"
+"Pca method : Pipe (Scaler + LR(parameter C))","Scaler + LR(parameter C)","0.73","11/30/2020","Logistic regression","C=1.2067926406393288, max_iter=5000, n_jobs=2,random_state=72"
+"Pca method : Pipe (Pca + Scaler + LR(parameter C))","(Pca + Scaler + LR(parameter C)","0.73","11/30/2020","Logistic regression","C=1.2067926406393288, max_iter=5000, n_jobs=2,random_state=72"
+"Regex function - removed hyperlinks, removed special characters","Cleaning with Regex function","0.8185","12/6/2020","Logistic regression","C=1.2067926406393288, max_iter=5000, n_jobs=2,random_state=72"
